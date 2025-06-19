@@ -1,5 +1,5 @@
 import React, { useEffect, memo, useMemo } from "react"
-import { FileText, Code, Award, Globe, ArrowUpRight, Sparkles, UserCheck } from "lucide-react"
+import { FileText, Code, Award, Globe, ArrowUpRight, Sparkles, Mail, Github, Instagram, Linkedin  } from "lucide-react"
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
@@ -18,7 +18,7 @@ const Header = memo(() => (
 ));
 
 const IntroText = memo(() => (
-    <div class="flex flex-col p-5 items-start" >
+    <div class="flex flex-col p-5 lg:items-start" >
   <div className="">
     <h2 
       className="text-4xl md:text-5xl mb-5 font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a855f7]" 
@@ -52,7 +52,7 @@ I'm a Computer Science Undergraduate at NUS (National University of Singapore), 
 ));
 
 const ProfileImage = memo(() => (
-  <div className="flex justify-end items-center sm:p-12 sm:py-0 sm:pb-0 p-0 py-2 pb-2">
+  <div className="flex self-center justify-end items-center sm:p-12 sm:py-0 sm:pb-0 p-0 py-2 pb-2">
     <div 
       className="relative group" 
       data-aos="fade-up"
@@ -87,6 +87,44 @@ const ProfileImage = memo(() => (
   </div>
 ));
 
+const SocialMediaIcons = () => {
+    return (
+        <>
+        <button className="group relative p-3 transform transition-all duration-300 hover:scale-105 hover:shadow-lg mr-8"         data-aos="zoom-in-up"
+        data-aos-duration="600">
+  <div className="absolute inset-0 bg-gradient-to-r from-[#6366f1] to-[#a855f7] rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
+  <div className="relative rounded-xl bg-black/50 backdrop-blur-xl p-2 flex items-center justify-center border border-white/10 group-hover:border-white/20 transition-all duration-300">
+    <Github className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
+  </div>
+</button>
+
+<button className="group relative p-3 transform transition-all duration-300 hover:scale-105 hover:shadow-lg mr-8"         data-aos="zoom-in-up"
+        data-aos-duration="600">
+  <div className="absolute inset-0 bg-gradient-to-r from-[#6366f1] to-[#a855f7] rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
+  <div className="relative rounded-xl bg-black/50 backdrop-blur-xl p-2 flex items-center justify-center border border-white/10 group-hover:border-white/20 transition-all duration-300">
+    <Linkedin className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
+  </div>
+</button>
+
+<button className="group relative p-3 transform transition-all duration-300 hover:scale-105 hover:shadow-lg mr-8 "         data-aos="zoom-in-up"
+        data-aos-duration="600">
+  <div className="absolute inset-0 bg-gradient-to-r from-[#6366f1] to-[#a855f7] rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
+  <div className="relative rounded-xl bg-black/50 backdrop-blur-xl p-2 flex items-center justify-center border border-white/10 group-hover:border-white/20 transition-all duration-300">
+    <Instagram className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
+  </div>
+</button>
+
+<button className="group relative p-3 transform transition-all duration-300 hover:scale-105 hover:shadow-lg mr-8 "         data-aos="zoom-in-up"
+        data-aos-duration="600">
+  <div className="absolute inset-0 bg-gradient-to-r from-[#6366f1] to-[#a855f7] rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
+  <div className="relative rounded-xl bg-black/50 backdrop-blur-xl p-2 flex items-center justify-center border border-white/10 group-hover:border-white/20 transition-all duration-300">
+    <Mail className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
+  </div>
+</button>
+        </>
+    )
+}
+
 
 
 
@@ -115,22 +153,35 @@ const AboutMe = () => {
   }, []);
       return (
     <div
-      className=" flex w-full" 
+      className="" 
       id="About"
     >
-    {/* <div>
-      <Header />
-    </div> */}
 
-    <div class="block sm:hidden">
+    <div class="flex lg:hidden">
     {/* This div will only appear on small screens (below 640px). */}
-    </div>
-
-    <div class="hidden sm:flex flex-row w-full justify-between">
-        <IntroText />
+    <div class="flex flex-col">
         <ProfileImage />
+        <IntroText />
+        <div class="flex flex-row w-full items-center justify-center">
+            <SocialMediaIcons />
+        </div>
+
     </div>
 
+    </div>
+
+    <div class="hidden lg:flex flex-col w-full">
+
+        <div class="flex flex-row w-full justify-between">
+            <IntroText />
+            <ProfileImage />
+        </div>
+
+        <div class="flex flex-row w-full pl-5">
+            <SocialMediaIcons />
+        </div>
+
+    </div>
 
 
 

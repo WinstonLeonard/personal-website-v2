@@ -7,6 +7,9 @@ const LandingPage = () => {
     <>
     <AnimatedBackground />
     <AboutMe/>
+    <DummyComponent />
+        <DummyComponent />
+
     </>
     );
 }
