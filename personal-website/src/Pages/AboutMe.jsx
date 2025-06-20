@@ -25,7 +25,7 @@ const IntroText = memo(() => (
       data-aos="zoom-in-up" 
       data-aos-duration="600"
     >
-      Hello World! I'm
+      Hi There! I'm
     </h2>
   </div>
 
@@ -90,7 +90,7 @@ const ProfileImage = memo(() => (
 const SocialMediaIcons = () => {
     return (
         <>
-        <button className="group relative p-3 transform transition-all duration-300 hover:scale-105 hover:shadow-lg mr-8"         data-aos="zoom-in-up"
+        <button className="cursor-pointer group relative p-3 transform transition-all duration-300 hover:scale-105 hover:shadow-lg mr-8"         data-aos="zoom-in-up"
         data-aos-duration="600">
   <div className="absolute inset-0 bg-gradient-to-r from-[#6366f1] to-[#a855f7] rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
   <div className="relative rounded-xl bg-black/50 backdrop-blur-xl p-2 flex items-center justify-center border border-white/10 group-hover:border-white/20 transition-all duration-300">
@@ -98,7 +98,7 @@ const SocialMediaIcons = () => {
   </div>
 </button>
 
-<button className="group relative p-3 transform transition-all duration-300 hover:scale-105 hover:shadow-lg mr-8"         data-aos="zoom-in-up"
+<button className="cursor-pointer group relative p-3 transform transition-all duration-300 hover:scale-105 hover:shadow-lg mr-8"         data-aos="zoom-in-up"
         data-aos-duration="600">
   <div className="absolute inset-0 bg-gradient-to-r from-[#6366f1] to-[#a855f7] rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
   <div className="relative rounded-xl bg-black/50 backdrop-blur-xl p-2 flex items-center justify-center border border-white/10 group-hover:border-white/20 transition-all duration-300">
@@ -106,7 +106,7 @@ const SocialMediaIcons = () => {
   </div>
 </button>
 
-<button className="group relative p-3 transform transition-all duration-300 hover:scale-105 hover:shadow-lg mr-8 "         data-aos="zoom-in-up"
+<button className="cursor-pointer group relative p-3 transform transition-all duration-300 hover:scale-105 hover:shadow-lg mr-8 "         data-aos="zoom-in-up"
         data-aos-duration="600">
   <div className="absolute inset-0 bg-gradient-to-r from-[#6366f1] to-[#a855f7] rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
   <div className="relative rounded-xl bg-black/50 backdrop-blur-xl p-2 flex items-center justify-center border border-white/10 group-hover:border-white/20 transition-all duration-300">
@@ -114,7 +114,7 @@ const SocialMediaIcons = () => {
   </div>
 </button>
 
-<button className="group relative p-3 transform transition-all duration-300 hover:scale-105 hover:shadow-lg mr-8 "         data-aos="zoom-in-up"
+<button className="cursor-pointer group relative p-3 transform transition-all duration-300 hover:scale-105 hover:shadow-lg mr-8 "         data-aos="zoom-in-up"
         data-aos-duration="600">
   <div className="absolute inset-0 bg-gradient-to-r from-[#6366f1] to-[#a855f7] rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
   <div className="relative rounded-xl bg-black/50 backdrop-blur-xl p-2 flex items-center justify-center border border-white/10 group-hover:border-white/20 transition-all duration-300">
