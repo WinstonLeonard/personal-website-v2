@@ -10,6 +10,7 @@ import {
 import { Button } from "@mui/material";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { fetchFrontEnd } from "../api/TechStackApi";
 
 const AnimatedHeader = () => (
   <div className="mt-40 text-center lg:mb-8 mb-2 px-[5%]">
@@ -262,6 +263,18 @@ function TechStack() {
 
     return () => AOS.refreshHard();
   }, []);
+
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const result = await fetchFrontEnd();
+        console.log(result);
+      } catch (err) {
+      }
+  };
+
+    getData();
+  }, []);  // Empty dependency array means this runs once on mount
 
   return (
     <div id="TechStack">
