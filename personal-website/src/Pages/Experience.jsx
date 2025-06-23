@@ -11,7 +11,7 @@ const CircleAndLine = () => {
       data-aos="zoom-in-up"
       data-aos-duration="600"
     >
-      <div className="w-1 bg-gradient-to-b from-[#6366f1] to-[#2C0C3D] opacity-70 h-10"></div>
+      <div className="w-1.5 bg-gradient-to-b from-[#3F4199] to-[#2C0C3D] opacity-70 h-10"></div>
       {/* <div className="rounded-full w-22 h-22 bg-white-500 border-2 border"></div> */}
       <button className="cursor-pointer group relative transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
         <div>
@@ -19,7 +19,7 @@ const CircleAndLine = () => {
           <div className="relative rounded-full w-20 h-20 bg-black/35 backdrop-blur-xl flex flex-col items-center justify-center border border-white/10 group-hover:border-white/20 transition-all duration-300"></div>
         </div>
       </button>
-      <div className="w-1 bg-gradient-to-b from-[#2C0C3D] to-[#6366f1] opacity-70 flex-grow"></div>
+      <div className="w-1.5 bg-gradient-to-b from-[#2C0C3D] to-[#3F4199] opacity-70 flex-grow"></div>
     </div>
   );
 };
