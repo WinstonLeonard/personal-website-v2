@@ -256,17 +256,16 @@ function TechStack() {
       try {
         const result = await fetchFrontEnd();
         console.log(result);
-      } catch (err) {
-      }
-  };
+      } catch (err) {}
+    };
 
     getData();
-  }, []);  // Empty dependency array means this runs once on mount
+  }, []); // Empty dependency array means this runs once on mount
 
   return (
     <div id="TechStack">
       <div className="hidden md:flex flex-col">
-        <AnimatedHeader Title={"Tech Stack"}/>
+        <AnimatedHeader Title={"Tech Stack"} />
         <AnimatedSelectionBar
           onSelect={handleSelection}
           currentSelected={selected}
@@ -274,7 +273,7 @@ function TechStack() {
         <IconContainer selectedIcons={selectedIcons} />
       </div>
       <div class="flex md:hidden flex-col">
-        <AnimatedHeader Title={"Tech Stack"}/>
+        <AnimatedHeader Title={"Tech Stack"} />
         <AnimatedSelectionBarMobile
           onSelect={handleSelection}
           currentSelected={selected}
