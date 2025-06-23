@@ -11,20 +11,7 @@ import { Button } from "@mui/material";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { fetchFrontEnd } from "../api/TechStackApi";
-
-const AnimatedHeader = () => (
-  <div className="mt-40 text-center lg:mb-8 mb-2 px-[5%]">
-    <div
-      className="inline-block relative group"
-      data-aos="zoom-in-up"
-      data-aos-duration="600"
-    >
-      <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a855f7]">
-        Tech Stack
-      </h2>
-    </div>
-  </div>
-);
+import AnimatedHeader from "../components/AnimatedHeader";
 
 const SelectionChoice = memo(({ text, icon, onClick, currentSelected }) =>
   currentSelected == text ? (
@@ -279,7 +266,7 @@ function TechStack() {
   return (
     <div id="TechStack">
       <div className="hidden md:flex flex-col">
-        <AnimatedHeader />
+        <AnimatedHeader Title={"Tech Stack"}/>
         <AnimatedSelectionBar
           onSelect={handleSelection}
           currentSelected={selected}
@@ -287,7 +274,7 @@ function TechStack() {
         <IconContainer selectedIcons={selectedIcons} />
       </div>
       <div class="flex md:hidden flex-col">
-        <AnimatedHeader />
+        <AnimatedHeader Title={"Tech Stack"}/>
         <AnimatedSelectionBarMobile
           onSelect={handleSelection}
           currentSelected={selected}
