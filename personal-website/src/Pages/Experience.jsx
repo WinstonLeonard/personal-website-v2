@@ -15,7 +15,7 @@ const CircleAndLine = () => {
         <div>
           <div className="absolute inset-0 bg-gradient-to-r from-[#6366f1] to-[#a855f7] rounded-full blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
           <div className="relative rounded-full w-20 h-20 bg-black/35 backdrop-blur-xl flex flex-col items-center justify-center border border-white/10 group-hover:border-white/20 transition-all duration-300">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA50SrRU-Wf5Y-C_01W6YoP6IxtYYBv_Pw4w&s" className="w-15 h-15 object-contain rounded-full" />
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA50SrRU-Wf5Y-C_01W6YoP6IxtYYBv_Pw4w&s" className="w-16 h-16 object-contain rounded-full" />
           </div>
         </div>
       </button>
@@ -50,7 +50,7 @@ const ExperienceDetails = ({direction}) => {
 const TimelineEntry = ({ index }) => {
   if (index % 2 == 0) {
     return (
-      <div className="relative w-[90%] mx-auto flex flex-row justify-center group"       data-aos="zoom-in-up"
+      <div className="relative w-[90%] mx-auto flex flex-row justify-center group"       data-aos="zoom-in-right"
       data-aos-duration="600">
         <div className="rounded-xl w-[40%] min-h-80 my-10 mr-7 flex relative">
             <ExperienceDetails direction={"Left"}/>
@@ -65,7 +65,7 @@ const TimelineEntry = ({ index }) => {
     );
   } else {
     return (
-      <div className="relative w-[90%] mx-auto flex flex-row justify-center group"       data-aos="zoom-in-up"
+      <div className="relative w-[90%] mx-auto flex flex-row justify-center group"       data-aos="zoom-in-left"
       data-aos-duration="600">
         <div className="rounded-xl w-[40%] min-h-80 my-10 mr-7 flex justify-end">
           <p className="mt-7 font-semibold text-lg">From:</p>
