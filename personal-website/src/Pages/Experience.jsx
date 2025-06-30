@@ -24,6 +24,16 @@ const CircleAndLine = () => {
   );
 };
 
+const ExperiencePoint = () => {
+    return (
+        <div className="flex flex-row items-center">
+        <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 group-hover:scale-125 transition-transform duration-300" />
+        <p>Test</p>
+        </div>
+
+    )
+}
+
 const ExperienceDetails = ({direction}) => {
     return (
         <div className="group w-full flex-grow flex relative">
@@ -33,11 +43,19 @@ const ExperienceDetails = ({direction}) => {
             <div className="flex flex-grow relative overflow-hidden rounded-xl bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-lg border border-white/10 shadow-2xl transition-all duration-300 group-hover:shadow-purple-500/20">
                 <div className="flex-grow absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
             
-                <div className="flex flex-grow relative p-5 z-10">
-                    <div className="relative overflow-hidden rounded-lg">
+                <div className="flex flex-grow relative p-5 z-10 flex-col">
+                    
+                    <div className="items-start justify-start text-left flex-grow">
+                        <p className="text-2xl font-semibold bg-gradient-to-r from-blue-200 via-white-200 to-purple-200 bg-clip-text text-transparent">Software Engineer Intern</p>
+                        <p className="text-lg font-semibold mt-3 text-gray-300">Continental Automotive</p>
+
                     </div>
-                    
-                    
+
+                    <div className="items-start justify-start text-left flex-grow bg-red-500">
+                        <ExperiencePoint />
+                    </div>
+
+
                     <div className="absolute inset-0 border border-white/0 group-hover:border-purple-500/50 rounded-xl transition-colors duration-300 -z-50"></div>
                 </div>
             </div>
