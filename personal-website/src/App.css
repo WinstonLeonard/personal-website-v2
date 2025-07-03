@@ -1,32 +1,11 @@
 @import "tailwindcss";
 
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  /* padding: 6rem; */
   text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  width: 100%;
+  /* background-color: red; */
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -39,6 +18,32 @@
   padding: 2em;
 }
 
-.read-the-docs {
-  color: #888;
+@keyframes typewriter {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.animate-typewriter {
+  overflow: hidden; /* Hide the text that is not yet typed */
+  white-space: nowrap; /* Prevent the text from wrapping to a new line */
+  width: 0; /* Start with width 0 */
+  animation: typewriter 0.5s steps(1000) 1s forwards; /* Adjust the timing and steps to your preference */
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
 }
