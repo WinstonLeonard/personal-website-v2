@@ -37,7 +37,7 @@ const SelectionChoice = memo(({ text, icon, onClick, currentSelected }) =>
   )
 );
 
-const AnimatedSelectionBar = ({ onSelect, currentSelected }) => (
+const AnimatedSelectionBar = memo(({ onSelect, currentSelected }) => (
   <div className="self-center justify-self-center mt-10 w-[85%]">
     <div data-aos="zoom-in-up" data-aos-duration="600">
       <div className="rounded-xl bg-gradient-to-r from-[#2B282B] to-[#242424] backdrop-blur-xl h-26 relative p-2">
@@ -77,12 +77,12 @@ const AnimatedSelectionBar = ({ onSelect, currentSelected }) => (
       </div>
     </div>
   </div>
-);
+));
 
 const SelectionChoiceMobile = memo(({ text, icon, onClick, currentSelected }) =>
   currentSelected == text ? (
     <div
-      className="group bg-[#362A54] rounded-xl flex flex-col items-center justify-center hover:bg-[#362A54] transition-all duration-300 cursor-pointer flex-wrap flex-grow mx-4"
+      className="group bg-[#362A54] rounded-xl flex flex-col items-center justify-center hover:bg-[#362A54] transition-all duration-300 cursor-pointer flex-wrap flex-grow mx-4 my-2"
       onClick={() => onClick(text)}
     >
       {icon && <div className="text-white">{icon}</div>}
@@ -90,7 +90,7 @@ const SelectionChoiceMobile = memo(({ text, icon, onClick, currentSelected }) =>
     </div>
   ) : (
     <div
-      className="group rounded-xl flex flex-col items-center justify-center hover:bg-[#271F3D] hover:scale-105 transition-all duration-300 cursor-pointer flex-wrap flex-grow mx-4"
+      className="group rounded-xl flex flex-col items-center justify-center hover:bg-[#271F3D] hover:scale-105 transition-all duration-300 cursor-pointer flex-wrap flex-grow mx-4 my-2"
       onClick={() => onClick(text)}
     >
       {icon && (
@@ -103,49 +103,51 @@ const SelectionChoiceMobile = memo(({ text, icon, onClick, currentSelected }) =>
   )
 );
 
-const AnimatedSelectionBarMobile = ({ onSelect, currentSelected }) => (
-  <div className="self-center justify-self-center mt-10 w-[90%]">
-    <div data-aos="zoom-in-up" data-aos-duration="600">
-      <div className="rounded-xl bg-gradient-to-r from-[#2B282B] to-[#242424] backdrop-blur-xl min-h-20 relative p-1">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#6366f1] to-[#a855f7] rounded-xl blur opacity-20 transition duration-300"></div>
-        <div className="h-full rounded-xl bg-black/50 backdrop-blur-xl flex space-x-4 flex-wrap justify-center items-center p-4">
-          <SelectionChoiceMobile
-            text="Frontend"
-            icon={<Laptop />}
-            onClick={onSelect}
-            currentSelected={currentSelected}
-          />
-          <SelectionChoiceMobile
-            text="Backend"
-            icon={<MonitorCog />}
-            onClick={onSelect}
-            currentSelected={currentSelected}
-          />
-          <SelectionChoiceMobile
-            text="AI / ML"
-            icon={<BrainCircuit />}
-            onClick={onSelect}
-            currentSelected={currentSelected}
-          />
-          <SelectionChoiceMobile
-            text="Languages"
-            icon={<Code />}
-            onClick={onSelect}
-            currentSelected={currentSelected}
-          />
-          <SelectionChoiceMobile
-            text="Tools"
-            icon={<Wrench />}
-            onClick={onSelect}
-            currentSelected={currentSelected}
-          />
+const AnimatedSelectionBarMobile = React.memo(
+  ({ onSelect, currentSelected }) => (
+    <div className="self-center justify-self-center mt-10 w-[90%]">
+      <div data-aos="zoom-in-up" data-aos-duration="600">
+        <div className="rounded-xl bg-gradient-to-r from-[#2B282B] to-[#242424] backdrop-blur-xl min-h-20 relative p-1">
+          <div className="absolute inset-0 bg-gradient-to-r from-[#6366f1] to-[#a855f7] rounded-xl blur opacity-20 transition duration-300"></div>
+          <div className="h-full rounded-xl bg-black/50 backdrop-blur-xl flex space-x-4 flex-wrap justify-center items-center p-4">
+            <SelectionChoiceMobile
+              text="Frontend"
+              icon={<Laptop />}
+              onClick={onSelect}
+              currentSelected={currentSelected}
+            />
+            <SelectionChoiceMobile
+              text="Backend"
+              icon={<MonitorCog />}
+              onClick={onSelect}
+              currentSelected={currentSelected}
+            />
+            <SelectionChoiceMobile
+              text="AI / ML"
+              icon={<BrainCircuit />}
+              onClick={onSelect}
+              currentSelected={currentSelected}
+            />
+            <SelectionChoiceMobile
+              text="Languages"
+              icon={<Code />}
+              onClick={onSelect}
+              currentSelected={currentSelected}
+            />
+            <SelectionChoiceMobile
+              text="Tools"
+              icon={<Wrench />}
+              onClick={onSelect}
+              currentSelected={currentSelected}
+            />
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  )
 );
 
-const Icons = ({ name, url }) => (
+const Icons = memo(({ name, url }) => (
   <button className="cursor-pointer group relative p-3 transform transition-all duration-300 hover:scale-105 hover:shadow-lg mr-8 mt-3">
     <div data-aos="zoom-in-up" data-aos-duration="600">
       <div className="absolute inset-0 bg-gradient-to-r from-[#6366f1] to-[#a855f7] rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
@@ -155,17 +157,17 @@ const Icons = ({ name, url }) => (
       </div>
     </div>
   </button>
-);
+));
 
-const IconContainer = ({ selectedIcons }) => (
+const IconContainer = memo(({ selectedIcons }) => (
   <div className="flex flex-wrap self-center justify-self-center mt-10 w-[85%] p-5 justify-center">
     {selectedIcons.map((icon, index) => (
       <Icons key={index} name={icon.name} url={icon.url} />
     ))}
   </div>
-);
+));
 
-const IconsMobile = ({ name, url }) => (
+const IconsMobile = memo(({ name, url }) => (
   <button className="cursor-pointer group relative p-2 transform transition-all duration-300 hover:scale-105 hover:shadow-lg mt-3">
     <div data-aos="zoom-in-up" data-aos-duration="600">
       <div className="absolute inset-0 bg-gradient-to-r from-[#6366f1] to-[#a855f7] rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
@@ -175,15 +177,15 @@ const IconsMobile = ({ name, url }) => (
       </div>
     </div>
   </button>
-);
+));
 
-const IconContainerMobile = ({ selectedIcons }) => (
+const IconContainerMobile = memo(({ selectedIcons }) => (
   <div className="flex flex-wrap self-center justify-self-center mt-10 w-[85%] justify-center">
     {selectedIcons.map((icon, index) => (
       <IconsMobile key={index} name={icon.name} url={icon.url} />
     ))}
   </div>
-);
+));
 
 function TechStack() {
   const [selected, setSelected] = useState("Frontend");

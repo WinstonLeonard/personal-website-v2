@@ -41,7 +41,7 @@ const IntroText = memo(() => (
 
     <div>
       <p
-        className="text-base sm:text-lg lg:text-xl text-gray-400 leading-relaxed text-justify pb-4 sm:pb-0 max-w-5xl"
+        className="text-base sm:text-lg lg:text-xl text-gray-400 leading-relaxed text-left pb-4 sm:pb-0 max-w-5xl"
         data-aos="fade-right"
         data-aos-duration="1500"
       >
