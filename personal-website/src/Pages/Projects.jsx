@@ -6,6 +6,8 @@ import Slider from "react-slick";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
 
 const arrowStyle = {
   position: "absolute",
@@ -66,6 +68,7 @@ const ImageSlider = () => {
 };
 
 const ProjectCard = ({ project }) => {
+  const navigate = useNavigate();
   return (
     <div
       className="group cursor-pointer"
@@ -93,7 +96,7 @@ const ProjectCard = ({ project }) => {
 
             <div className="mt-auto flex justify-end">
     <div className="h-8 hover:scale-110 transition-transform duration-500 cursor-pointer">
-            <p className="text-blue-200">See More</p>
+            <p className="text-blue-200" onClick={() =>navigate("/project/1")}>See More</p>
 
     </div>
   </div>
