@@ -33,8 +33,8 @@ export const PrevArrow = ({ onClick }) => (
 
 const ImageSlider = () => {
   const images = [
-    "https://media.licdn.com/dms/image/v2/D5603AQExJ-2QzsNSTQ/profile-displayphoto-shrink_200_200/B56ZSemaGcGUAY-/0/1737827657569?e=2147483647&v=beta&t=jRRt3mfzi0k4qm-wd7shCuJpxjj3rljc1Z_gnL_-8eU",
-    "https://media.licdn.com/dms/image/v2/D5603AQExJ-2QzsNSTQ/profile-displayphoto-shrink_200_200/B56ZSemaGcGUAY-/0/1737827657569?e=2147483647&v=beta&t=jRRt3mfzi0k4qm-wd7shCuJpxjj3rljc1Z_gnL_-8eU",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmSmJgXu6kW8ONXMTLq0LD6BJGFV3Hoc0DRg&s",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmSmJgXu6kW8ONXMTLq0LD6BJGFV3Hoc0DRg&s"
   ];
 
   const settings = {
@@ -56,7 +56,7 @@ const ImageSlider = () => {
             <img
               src={url}
               alt={`slide-${i}`}
-              className="w-full h-60 object-cover rounded-xl"
+              className="w-full h-60 object-contain rounded-xl"
             />
           </div>
         ))}
@@ -68,27 +68,35 @@ const ImageSlider = () => {
 const ProjectCard = ({ project }) => {
   return (
     <div
-      className="group w-[30%] cursor-pointer"
+      className="group cursor-pointer"
       data-aos="zoom-in-up"
       data-aos-duration="700"
     >
-      <div className="flex flex-grow relative overflow-hidden rounded-xl bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-lg border border-white/10 shadow-2xl transition-all duration-300 group-hover:shadow-purple-500/20">
+      <div className="flex flex-grow overflow-hidden rounded-xl bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-lg border border-white/10 shadow-2xl transition-all duration-300 group-hover:shadow-purple-500/20">
         <div className="flex-grow absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
 
-        <div className="flex flex-grow relative flex-col w-full h-120 relative">
-          <ImageSlider />
+        <div className="flex flex-grow relative flex-col w-full h-120 relative p-4">
+          <div className="w-full h-[50%] overflow-hidden rounded-xl">
+                <img
+              src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmSmJgXu6kW8ONXMTLq0LD6BJGFV3Hoc0DRg&s"}
+              className="w-full h-full rounded-xl object-cover transform group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
           <div className="items-start justify-start text-left group">
-            <p className="mt-5 ml-5 text-2xl font-semibold bg-gradient-to-r from-blue-200 via-white-200 to-purple-200 bg-clip-text text-transparent">
+            <p className="mt-5 text-2xl font-semibold bg-gradient-to-r from-blue-200 via-white-200 to-purple-200 bg-clip-text text-transparent">
               Project name
             </p>
-            <p className="ml-5 text-lg font-[200] mt-3 text-gray-300">
-              Bla bla description here
+            <p className="text-lg font-[300] mt-3 text-gray-300">
+              This is the description of the project. This is the description of the project. This is the description of the project.
             </p>
           </div>
-          <div className="h-8 justify-items-center content-center items-center flex flex-row absolute bottom-[5%] mr-5 justify-self-end self-end hover:scale-110 transition-transform duration-300 cursor-pointer">
+
+            <div className="mt-auto flex justify-end">
+    <div className="h-8 hover:scale-110 transition-transform duration-500 cursor-pointer">
             <p className="text-blue-200">See More</p>
-            {/* <ArrowRightToLine className="text-blue-200 ml-1" /> */}
-          </div>
+
+    </div>
+  </div>
 
           <div className="absolute inset-0 border border-white/0 group-hover:border-purple-500/50 rounded-xl transition-colors duration-300 -z-50"></div>
         </div>
@@ -123,7 +131,7 @@ const Projects = () => {
   return (
     <>
       <AnimatedHeader Title={"Projects"} />
-      <div className="flex w-[90%] mx-auto items-center justify-between flex-wrap gap-10 mt-10">
+<div className="grid grid-cols-[repeat(auto-fit,_minmax(350px,_1fr))] max-w-[90%] mx-auto gap-x-5 gap-y-5 mt-10">
         <ProjectCard project={{}} />
         <ProjectCard project={{}} />
         <ProjectCard project={{}} />
