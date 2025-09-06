@@ -8,7 +8,12 @@ import "../index.css";
 // - title: string (optional) accessible label/title
 // - thumbnailHeight: number (optional) height of the inline preview in px (default 200)
 // - className: string (optional) extra classnames for the wrapper
-function Certificate({ src, title = "Certificate PDF", thumbnailHeight = 200, className = "" }) {
+function Certificate({
+  src,
+  title = "Certificate PDF",
+  thumbnailHeight = 200,
+  className = "",
+}) {
   const [isOpen, setIsOpen] = useState(false);
   const modalRef = useRef(null);
 
@@ -25,7 +30,10 @@ function Certificate({ src, title = "Certificate PDF", thumbnailHeight = 200, cl
   }, [isOpen]);
 
   return (
-    <div className={className} style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+    <div
+      className={className}
+      style={{ display: "flex", flexDirection: "column", gap: 8 }}
+    >
       <div
         role="button"
         tabIndex={0}
@@ -44,7 +52,11 @@ function Certificate({ src, title = "Certificate PDF", thumbnailHeight = 200, cl
         }}
       >
         {/* Inline PDF preview via <embed>. Some browsers show first page thumbnail-like view. */}
-        <embed src={src} type="application/pdf" style={{ width: "100%", height: thumbnailHeight }} />
+        <embed
+          src={src}
+          type="application/pdf"
+          style={{ width: "100%", height: thumbnailHeight }}
+        />
       </div>
 
       {isOpen && (
@@ -70,8 +82,8 @@ function Certificate({ src, title = "Certificate PDF", thumbnailHeight = 200, cl
           <div
             style={{
               position: "relative",
-              width: "min(1200px, 95vw)",
-              height: "min(90vh, 1000px)",
+              width: "90%",
+              height: "90%",
               background: "#111",
               borderRadius: 10,
               overflow: "hidden",
@@ -110,4 +122,3 @@ function Certificate({ src, title = "Certificate PDF", thumbnailHeight = 200, cl
 }
 
 export default Certificate;
-

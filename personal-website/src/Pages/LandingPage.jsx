@@ -5,6 +5,7 @@ import AboutMe from "./AboutMe";
 import TechStack from "./TechStack";
 import Experience from "./Experience";
 import Projects from "./Projects";
+import Certificates from "./Certificates";
 
 const LandingPage = () => {
   return (
@@ -14,13 +15,7 @@ const LandingPage = () => {
       <TechStack />
       <Experience />
       <Projects />
-      <div style={{ padding: 16 }}>
-        <Certificate
-          src="/certificate.pdf"
-          title="Certificate Preview"
-          thumbnailHeight={240}
-        />
-      </div>
+      <Certificates />
       <DummyComponent />
     </>
   );

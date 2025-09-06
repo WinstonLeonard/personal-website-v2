@@ -5,9 +5,8 @@ import "slick-carousel/slick/slick.css";
 import Slider from "react-slick";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
 
 const arrowStyle = {
   position: "absolute",
@@ -36,7 +35,7 @@ export const PrevArrow = ({ onClick }) => (
 const ImageSlider = () => {
   const images = [
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmSmJgXu6kW8ONXMTLq0LD6BJGFV3Hoc0DRg&s",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmSmJgXu6kW8ONXMTLq0LD6BJGFV3Hoc0DRg&s"
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmSmJgXu6kW8ONXMTLq0LD6BJGFV3Hoc0DRg&s",
   ];
 
   const settings = {
@@ -80,8 +79,10 @@ const ProjectCard = ({ project }) => {
 
         <div className="flex flex-grow relative flex-col w-full h-120 relative p-4">
           <div className="w-full h-[50%] overflow-hidden rounded-xl">
-                <img
-              src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmSmJgXu6kW8ONXMTLq0LD6BJGFV3Hoc0DRg&s"}
+            <img
+              src={
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmSmJgXu6kW8ONXMTLq0LD6BJGFV3Hoc0DRg&s"
+              }
               className="w-full h-full rounded-xl object-cover transform group-hover:scale-105 transition-transform duration-500"
             />
           </div>
@@ -90,16 +91,21 @@ const ProjectCard = ({ project }) => {
               Project name
             </p>
             <p className="text-lg font-[300] mt-3 text-gray-300">
-              This is the description of the project. This is the description of the project. This is the description of the project.
+              This is the description of the project. This is the description of
+              the project. This is the description of the project.
             </p>
           </div>
 
-            <div className="mt-auto flex justify-end">
-    <div className="h-8 hover:scale-110 transition-transform duration-500 cursor-pointer">
-            <p className="text-blue-200" onClick={() =>navigate("/project/1")}>See More</p>
-
-    </div>
-  </div>
+          <div className="mt-auto flex justify-end">
+            <div className="h-8 hover:scale-110 transition-transform duration-500 cursor-pointer">
+              <p
+                className="text-blue-200"
+                onClick={() => navigate("/project/1")}
+              >
+                See More
+              </p>
+            </div>
+          </div>
 
           <div className="absolute inset-0 border border-white/0 group-hover:border-purple-500/50 rounded-xl transition-colors duration-300 -z-50"></div>
         </div>
@@ -134,7 +140,7 @@ const Projects = () => {
   return (
     <>
       <AnimatedHeader Title={"Projects"} />
-<div className="grid grid-cols-[repeat(auto-fit,_minmax(350px,_1fr))] max-w-[90%] mx-auto gap-x-5 gap-y-5 mt-10">
+      <div className="grid grid-cols-[repeat(auto-fit,_minmax(350px,_1fr))] max-w-[90%] mx-auto gap-x-5 gap-y-5 mt-10">
         <ProjectCard project={{}} />
         <ProjectCard project={{}} />
         <ProjectCard project={{}} />

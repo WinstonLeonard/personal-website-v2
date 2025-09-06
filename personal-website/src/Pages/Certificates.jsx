@@ -1,0 +1,100 @@
+import AnimatedHeader from "../components/AnimatedHeader";
+import React, { useState } from "react";
+
+const CertificateCard = ({ certificate }) => {
+  const [showModal, setShowModal] = useState(false);
+  return (
+    <>
+      <div
+        className="group cursor-pointer"
+        data-aos="zoom-in-up"
+        data-aos-duration="700"
+        onClick={() => setShowModal(true)}
+      >
+        <div className="flex flex-grow overflow-hidden rounded-xl bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-lg border border-white/10 shadow-2xl transition-all duration-300 group-hover:shadow-purple-500/20">
+          <div className="flex-grow absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
+          <div className="flex flex-grow relative flex-col w-full h-65 md:h-80 relative p-2">
+            <div className="w-full h-[85%] flex items-center justify-center overflow-hidden rounded-xl bg-gray-900">
+              <span className="text-5xl text-purple-300">📄</span>
+            </div>
+            <div className="items-start justify-start text-left group p-2">
+              <p className="text-lg font-semibold bg-gradient-to-r from-blue-200 via-white-200 to-purple-200 bg-clip-text text-transparent">
+                {certificate.name}
+              </p>
+            </div>
+            <div className="absolute inset-0 border border-white/0 group-hover:border-purple-500/50 rounded-xl transition-colors duration-300 -z-50"></div>
+          </div>
+        </div>
+      </div>
+      {showModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
+          <div className="bg-white rounded-xl shadow-2xl p-6 max-w-3xl w-full relative">
+            <button
+              className="absolute top-2 right-2 text-gray-600 hover:text-purple-600 text-2xl"
+              onClick={() => setShowModal(false)}
+            >
+              ×
+            </button>
+            <iframe
+              src={certificate.pdfUrl}
+              title="Certificate Preview"
+              className="w-full h-[500px] rounded-lg border"
+            ></iframe>
+          </div>
+        </div>
+      )}
+    </>
+  );
+};
+
+const Certificates = () => {
+  return (
+    <>
+      <AnimatedHeader Title={"Certificates"} />
+      <div className="grid grid-cols-[repeat(auto-fit,_minmax(380px,_1fr))] md:grid-cols-[repeat(auto-fit,_minmax(420px,_1fr))] max-w-[80%] mx-auto gap-x-5 gap-y-5 mt-10">
+        <CertificateCard
+          certificate={{
+            name: "Certificate Title",
+            description:
+              "This is a preview of your certificate. Click to view.",
+            pdfUrl: "/certificate.pdf",
+          }}
+        />
+        <CertificateCard
+          certificate={{
+            name: "Certificate Title",
+            description:
+              "This is a preview of your certificate. Click to view.",
+            pdfUrl: "/path/to/certificate.pdf",
+          }}
+        />
+        <CertificateCard
+          certificate={{
+            name: "Certificate Title",
+            description:
+              "This is a preview of your certificate. Click to view.",
+            pdfUrl: "/path/to/certificate.pdf",
+          }}
+        />
+        <CertificateCard
+          certificate={{
+            name: "Certificate Title",
+            description:
+              "This is a preview of your certificate. Click to view.",
+            pdfUrl: "/path/to/certificate.pdf",
+          }}
+        />
+        <CertificateCard
+          certificate={{
+            name: "Certificate Title",
+            description:
+              "This is a preview of your certificate. Click to view.",
+            pdfUrl: "/path/to/certificate.pdf",
+          }}
+        />
+      </div>
+    </>
+  );
+};
+
+export default Certificates;
