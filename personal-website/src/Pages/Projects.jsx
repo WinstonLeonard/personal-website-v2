@@ -140,7 +140,7 @@ const Projects = () => {
   return (
     <>
       <AnimatedHeader Title={"Projects"} />
-      <div className="grid grid-cols-[repeat(auto-fit,_minmax(350px,_1fr))] max-w-[90%] mx-auto gap-x-5 gap-y-5 mt-10">
+      <div className="grid grid-cols-[repeat(auto-fit,_minmax(340px,_1fr))] max-w-[90%] mx-auto gap-x-5 gap-y-5 mt-10">
         <ProjectCard project={{}} />
         <ProjectCard project={{}} />
         <ProjectCard project={{}} />

@@ -28,7 +28,7 @@ const CertificateCard = ({ certificate }) => {
       </div>
       {showModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
-          <div className="bg-white rounded-xl shadow-2xl p-6 max-w-3xl w-full relative">
+          <div className="bg-white rounded-xl shadow-2xl p-6 max-w-[380px] md:max-w-3xl w-[80%] relative">
             <button
               className="absolute top-2 right-2 text-gray-600 hover:text-purple-600 text-2xl"
               onClick={() => setShowModal(false)}
@@ -36,9 +36,9 @@ const CertificateCard = ({ certificate }) => {
               ×
             </button>
             <iframe
-              src={certificate.pdfUrl}
+              src={certificate.pdfUrl + "#toolbar=0"}
               title="Certificate Preview"
-              className="w-full h-[500px] rounded-lg border"
+              className="w-full h-[340px] md:h-[500px] rounded-lg border"
             ></iframe>
           </div>
         </div>
@@ -51,7 +51,7 @@ const Certificates = () => {
   return (
     <>
       <AnimatedHeader Title={"Certificates"} />
-      <div className="grid grid-cols-[repeat(auto-fit,_minmax(380px,_1fr))] md:grid-cols-[repeat(auto-fit,_minmax(420px,_1fr))] max-w-[80%] mx-auto gap-x-5 gap-y-5 mt-10">
+      <div className="grid grid-cols-[repeat(auto-fit,_minmax(340px,_1fr))] md:grid-cols-[repeat(auto-fit,_minmax(400x,_1fr))] max-w-[90%] mx-auto gap-x-5 gap-y-5 mt-10">
         <CertificateCard
           certificate={{
             name: "Certificate Title",
