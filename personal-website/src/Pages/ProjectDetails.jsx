@@ -20,6 +20,9 @@ const projects = {
             "Responsive grid and slider galleries",
             "Project pages with rich details",
             "Smooth scroll-based interactions",
+            "Animated hero and background effects",
+            "Animated hero and background effects",
+            "Animated hero and background effects"
         ],
         technologies: ["React", "Vite", "TailwindCSS", "AOS", "Slick", "MUI"],
     },
@@ -106,14 +109,13 @@ const ProjectDetails = () => {
                     </div>
                 </div>
 
-                {/* Optional: demo video section (keep commented if not needed)
                 <div className="mt-10 rounded-xl overflow-hidden border border-white/10 bg-black/30">
                     <video autoPlay muted loop controls className="w-full">
                         <source src="https://mnuhdfulimayebkvchyh.supabase.co/storage/v1/object/public/techstack-icons//Screen%20Recording%202025-06-19%20164911.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
                 </div>
-                */}
+               
             </div>
         </>
     );
