@@ -189,32 +189,7 @@ const IconContainerMobile = memo(({ selectedIcons }) => (
 
 function TechStack() {
   const [selected, setSelected] = useState("Frontend");
-  const [frontEndData, setFrontEndData] = useState([
-    {
-      name: "React",
-      url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-    },
-    {
-      name: "React",
-      url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-    },
-    {
-      name: "React",
-      url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-    },
-    {
-      name: "React",
-      url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-    },
-    {
-      name: "React",
-      url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-    },
-    {
-      name: "React",
-      url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-    },
-  ]);
+  const [frontEndData, setFrontEndData] = useState([]);
   const [backEndData, setBackEndData] = useState([]);
   const [aiMlData, setAiMlData] = useState([]);
   const [languagesData, setLanguagesData] = useState([]);
@@ -257,12 +232,33 @@ function TechStack() {
     const getData = async () => {
       try {
         const result = await fetchFrontEnd();
-        console.log(result);
+        console.log("Fetched Frontend Data:", result);
+        setFrontEndData(result);
       } catch (err) {}
     };
 
     getData();
   }, []); // Empty dependency array means this runs once on mount
+
+  useEffect(() => {
+    switch (selected) {
+      case "Frontend":
+        setSelectedIcons(frontEndData);
+        break;
+      case "Backend":
+        setSelectedIcons(backEndData);
+        break;
+      case "AI / ML":
+        setSelectedIcons(aiMlData);
+        break;
+      case "Languages":
+        setSelectedIcons(languagesData);
+        break;
+      case "Tools":
+        setSelectedIcons(toolsData);
+        break;
+    }
+  }, [frontEndData, backEndData, aiMlData, languagesData, toolsData]);
 
   return (
     <div id="TechStack">
