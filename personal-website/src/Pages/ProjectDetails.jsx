@@ -101,6 +101,10 @@ export default function ProjectDetails() {
     </button>
   ));
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, []);
+
   return (
     <>
       {/* Slick height + UI polish. If you prefer, move this into your global CSS. */}

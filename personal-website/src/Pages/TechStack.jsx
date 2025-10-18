@@ -273,7 +273,7 @@ function TechStack() {
         />
         <IconContainer selectedIcons={selectedIcons} />
       </div>
-      <div class="flex md:hidden flex-col">
+      <div className="flex md:hidden flex-col">
         <AnimatedHeader Title={"Tech Stack"} />
         <AnimatedSelectionBarMobile
           onSelect={handleSelection}

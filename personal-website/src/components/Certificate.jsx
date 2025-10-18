@@ -30,10 +30,7 @@ function Certificate({
   }, [isOpen]);
 
   return (
-    <div
-      className={className}
-      style={{ display: "flex", flexDirection: "column", gap: 8 }}
-    >
+    <div className={className}>
       <div
         role="button"
         tabIndex={0}

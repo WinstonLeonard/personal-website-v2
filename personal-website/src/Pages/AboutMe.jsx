@@ -18,7 +18,7 @@ const Header = memo(() => (
 ));
 
 const IntroText = memo(() => (
-  <div class="flex flex-col p-5 lg:items-start">
+  <div className="flex flex-col p-5 lg:items-start">
     <div className="">
       <h2
         className="text-4xl md:text-5xl mb-5 font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a855f7]"
@@ -175,24 +175,24 @@ const AboutMe = () => {
   }, []);
   return (
     <div className="" id="About">
-      <div class="flex lg:hidden">
+      <div className="flex lg:hidden">
         {/* This div will only appear on small screens (below 640px). */}
-        <div class="flex flex-col">
+        <div className="flex flex-col">
           <ProfileImage />
           <IntroText />
-          <div class="flex flex-row w-full items-center justify-center">
+          <div className="flex flex-row w-full items-center justify-center">
             <SocialMediaIcons />
           </div>
         </div>
       </div>
 
-      <div class="hidden lg:flex flex-col w-full p-15">
-        <div class="flex flex-row w-full justify-between">
+      <div className="hidden lg:flex flex-col w-full p-15">
+        <div className="flex flex-row w-full justify-between">
           <IntroText />
           <ProfileImage />
         </div>
 
-        <div class="flex flex-row w-full pl-5">
+        <div className="flex flex-row w-full pl-5">
           <SocialMediaIcons />
         </div>
       </div>

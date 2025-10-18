@@ -28,7 +28,7 @@ const CircleAndLine = React.memo(({ image }) => (
 const ExperiencePoint = React.memo(({ points, links }) => (
   <div>
     {points.map((point, index) => (
-      <div className="flex flex-row justify-start items-start">
+      <div key={index} className="flex flex-row justify-start items-start">
         <div className="w-[3%] flex">
           <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 group-hover:scale-125 transition-transform duration-300 mt-2.5" />
         </div>
@@ -40,7 +40,7 @@ const ExperiencePoint = React.memo(({ points, links }) => (
       </div>
     ))}
     {links.map((link, idx) => (
-      <div className="flex flex-row justify-start items-start">
+      <div key={idx} className="flex flex-row justify-start items-start">
         <div className="w-[3%] flex">
           <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 group-hover:scale-125 transition-transform duration-300 mt-2.5" />
         </div>
@@ -206,7 +206,7 @@ const ExperiencePointsMobile = React.memo(({ points, links }) => (
       </div>
     ))}
     {links.map((link, idx) => (
-      <div className="flex flex-row justify-start items-start">
+      <div key={idx} className="flex flex-row justify-start items-start">
         <div className="w-[3%] flex mr-1">
           <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 mt-2.5" />
         </div>
