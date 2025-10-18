@@ -12,11 +12,11 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { fetchFrontEnd } from "../api/TechStackApi";
 import AnimatedHeader from "../components/AnimatedHeader";
-import frontend from "../data/TechStack/frontend.json";
-import backend from "../data/TechStack/backend.json";
-import ai_ml from "../data/TechStack/ai_ml.json";
-import languages from "../data/TechStack/languages.json";
-import tools from "../data/TechStack/tools.json";
+import frontend from "../Data/TechStack/frontend.json";
+import backend from "../Data/TechStack/backend.json";
+import ai_ml from "../Data/TechStack/ai_ml.json";
+import languages from "../Data/TechStack/languages.json";
+import tools from "../Data/TechStack/tools.json";
 
 const SelectionChoice = memo(({ text, icon, onClick, currentSelected }) =>
   currentSelected == text ? (
