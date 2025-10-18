@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "PeerPrep",
+    "description": "A real-time collaborative coding platform that connects users for pair programming and guided practice with built-in AI support and live interaction features.",
+    "image": "https://mnuhdfulimayebkvchyh.supabase.co/storage/v1/object/public/project_preview/PeerPrep%20logo.png"
+  },
+  {
+    "id": 2,
+    "name": "Project Name",
+    "description": "This is the description of the project. This is the description of the project. This is the description of the project.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmSmJgXu6kW8ONXMTLq0LD6BJGFV3Hoc0DRg&s"
+  },
+  {
+    "id": 3,
+    "name": "Project Name",
+    "description": "This is the description of the project. This is the description of the project. This is the description of the project.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmSmJgXu6kW8ONXMTLq0LD6BJGFV3Hoc0DRg&s"
+  },
+  {
+    "id": 4,
+    "name": "Project Name",
+    "description": "This is the description of the project. This is the description of the project. This is the description of the project.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmSmJgXu6kW8ONXMTLq0LD6BJGFV3Hoc0DRg&s"
+  }
+]

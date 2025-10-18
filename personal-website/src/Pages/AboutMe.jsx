@@ -91,6 +91,9 @@ const SocialMediaIcons = () => {
   return (
     <>
       <button
+        onClick={() =>
+          window.open("https://github.com/WinstonLeonard", "_blank")
+        }
         className="cursor-pointer group relative p-3 transform transition-all duration-300 hover:scale-105 hover:shadow-lg mr-2 lg:mr-8"
         data-aos="zoom-in-up"
         data-aos-duration="600"
@@ -102,6 +105,12 @@ const SocialMediaIcons = () => {
       </button>
 
       <button
+        onClick={() =>
+          window.open(
+            "https://linkedin.com/in/winston-leonard-prayonggo-89a066217/",
+            "_blank"
+          )
+        }
         className="cursor-pointer group relative p-3 transform transition-all duration-300 hover:scale-105 hover:shadow-lg mr-2 lg:mr-8"
         data-aos="zoom-in-up"
         data-aos-duration="600"
@@ -113,6 +122,9 @@ const SocialMediaIcons = () => {
       </button>
 
       <button
+        onClick={() =>
+          window.open("https://www.instagram.com/leonard_winstonn/", "_blank")
+        }
         className="cursor-pointer group relative p-3 transform transition-all duration-300 hover:scale-105 hover:shadow-lg mr-2 lg:mr-8 "
         data-aos="zoom-in-up"
         data-aos-duration="600"
@@ -124,6 +136,7 @@ const SocialMediaIcons = () => {
       </button>
 
       <button
+        onClick={() => window.open("mailto:winstonleonard@u.nus.edu", "_blank")}
         className="cursor-pointer group relative p-3 transform transition-all duration-300 hover:scale-105 hover:shadow-lg mr-2 lg:mr-8 "
         data-aos="zoom-in-up"
         data-aos-duration="600"

@@ -55,7 +55,7 @@ const CertificateCard = ({ certificate }) => {
       {showModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
           <div
-            className="bg-white rounded-xl shadow-2xl p-6 w-[90%] md:w-[80%] max-w-3xl
+            className="bg-white rounded-xl shadow-2xl p-6 w-[50%] md:w-[30%] max-w-3xl
                  max-h-[90vh] relative flex flex-col overflow-hidden"
           >
             <button
@@ -77,7 +77,7 @@ const CertificateCard = ({ certificate }) => {
                   <Page
                     key={index}
                     pageNumber={index + 1}
-                    scale={0.6}
+                    scale={0.65}
                     renderAnnotationLayer={false}
                     renderTextLayer={false}
                   />
@@ -102,20 +102,6 @@ const Certificates = () => {
             description:
               "This is a preview of your certificate. Click to view.",
             pdfUrl: "/certificate.pdf",
-          }}
-        />
-        <CertificateCard
-          certificate={{
-            name: "Machine Learning Course",
-            description: "ML Certificate from Coursera",
-            pdfUrl: "/path/to/ml-certificate.pdf",
-          }}
-        />
-        <CertificateCard
-          certificate={{
-            name: "Web Development Certificate",
-            description: "Completed Full Stack Bootcamp",
-            pdfUrl: "/path/to/web-cert.pdf",
           }}
         />
       </div>

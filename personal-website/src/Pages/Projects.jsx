@@ -7,6 +7,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import projectPreviewData from "../Data/ProjectPreview/projectPreview.json";
 
 const arrowStyle = {
   position: "absolute",
@@ -66,32 +67,9 @@ const ImageSlider = () => {
   );
 };
 
-const projectCard = [
-  {
-    name: "Project Name",
-    description:
-      "This is the description of the project. This is the description of the project. This is the description of the project.",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmSmJgXu6kW8ONXMTLq0LD6BJGFV3Hoc0DRg&s",
-  },
-  {
-    name: "Project Name",
-    description:
-      "This is the description of the project. This is the description of the project. This is the description of the project.",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmSmJgXu6kW8ONXMTLq0LD6BJGFV3Hoc0DRg&s",
-  },
-  {
-    name: "Project Name",
-    description:
-      "This is the description of the project. This is the description of the project. This is the description of the project.",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmSmJgXu6kW8ONXMTLq0LD6BJGFV3Hoc0DRg&s",
-  },
-];
-
 const ProjectCard = ({ project }) => {
   const navigate = useNavigate();
+
   return (
     <div
       className="group cursor-pointer"
@@ -104,19 +82,16 @@ const ProjectCard = ({ project }) => {
         <div className="flex flex-grow relative flex-col w-full h-120 relative p-4">
           <div className="w-full h-[50%] overflow-hidden rounded-xl">
             <img
-              src={
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmSmJgXu6kW8ONXMTLq0LD6BJGFV3Hoc0DRg&s"
-              }
+              src={project.image}
               className="w-full h-full rounded-xl object-cover transform group-hover:scale-105 transition-transform duration-500"
             />
           </div>
           <div className="items-start justify-start text-left group">
             <p className="mt-5 text-2xl font-semibold bg-gradient-to-r from-blue-200 via-white-200 to-purple-200 bg-clip-text text-transparent">
-              Project name
+              {project.name}
             </p>
             <p className="text-lg font-[300] mt-3 text-gray-300">
-              This is the description of the project. This is the description of
-              the project. This is the description of the project.
+              {project.description}
             </p>
           </div>
 
@@ -124,7 +99,10 @@ const ProjectCard = ({ project }) => {
             <div className="h-8 hover:scale-110 transition-transform duration-500 cursor-pointer">
               <p
                 className="text-blue-200"
-                onClick={() => navigate("/project/1")}
+                onClick={() => {
+                  navigate("/project/1");
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
               >
                 See More
               </p>
@@ -165,7 +143,7 @@ const Projects = () => {
     <>
       <AnimatedHeader Title={"Projects"} />
       <div className="grid grid-cols-[repeat(auto-fit,_minmax(340px,_1fr))] max-w-[90%] mx-auto gap-x-5 gap-y-5 mt-10">
-        {projectCard.map((project, index) => (
+        {projectPreviewData.map((project, index) => (
           <ProjectCard key={index} project={project} />
         ))}
       </div>
