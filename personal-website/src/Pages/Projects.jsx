@@ -66,6 +66,30 @@ const ImageSlider = () => {
   );
 };
 
+const projectCard = [
+  {
+    name: "Project Name",
+    description:
+      "This is the description of the project. This is the description of the project. This is the description of the project.",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmSmJgXu6kW8ONXMTLq0LD6BJGFV3Hoc0DRg&s",
+  },
+  {
+    name: "Project Name",
+    description:
+      "This is the description of the project. This is the description of the project. This is the description of the project.",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmSmJgXu6kW8ONXMTLq0LD6BJGFV3Hoc0DRg&s",
+  },
+  {
+    name: "Project Name",
+    description:
+      "This is the description of the project. This is the description of the project. This is the description of the project.",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmSmJgXu6kW8ONXMTLq0LD6BJGFV3Hoc0DRg&s",
+  },
+];
+
 const ProjectCard = ({ project }) => {
   const navigate = useNavigate();
   return (
@@ -141,10 +165,9 @@ const Projects = () => {
     <>
       <AnimatedHeader Title={"Projects"} />
       <div className="grid grid-cols-[repeat(auto-fit,_minmax(340px,_1fr))] max-w-[90%] mx-auto gap-x-5 gap-y-5 mt-10">
-        <ProjectCard project={{}} />
-        <ProjectCard project={{}} />
-        <ProjectCard project={{}} />
-        <ProjectCard project={{}} />
+        {projectCard.map((project, index) => (
+          <ProjectCard key={index} project={project} />
+        ))}
       </div>
     </>
   );
