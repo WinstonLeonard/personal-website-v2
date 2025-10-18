@@ -213,7 +213,7 @@ export default function ProjectDetails() {
                     />
                   ) : (
                     <video
-                      autoPlay
+                      autoPlay={false}
                       muted
                       loop
                       controls
