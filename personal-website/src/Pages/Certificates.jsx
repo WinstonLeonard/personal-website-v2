@@ -50,7 +50,7 @@ const CertificateCard = ({ certificate }) => {
               ×
             </button>
             <iframe
-              src={certificate.pdfUrl + "#toolbar=0"}
+              src={`${certificate.pdfUrl}#toolbar=0&zoom=fitH`}
               title="Certificate Preview"
               className="w-full h-[500px] md:h-[500px] rounded-lg border"
             ></iframe>
