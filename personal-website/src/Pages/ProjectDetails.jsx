@@ -214,7 +214,7 @@ export default function ProjectDetails() {
                   ) : (
                     <video
                       autoPlay={false}
-                      muted
+                      muted={false}
                       loop
                       controls
                       className="h-full w-full object-cover"

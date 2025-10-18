@@ -100,8 +100,7 @@ const ProjectCard = ({ project }) => {
               <p
                 className="text-blue-200"
                 onClick={() => {
-                  navigate("/project/1");
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  navigate(`/project/${project.id}`);
                 }}
               >
                 See More
