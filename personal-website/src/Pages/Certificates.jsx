@@ -25,11 +25,13 @@ const CertificateCard = ({ certificate }) => {
                 className="absolute inset-0 bg-transparent z-10 overflow-hidden cursor-pointer"
                 onClick={() => setShowModal(true)} // Open the modal when clicked
               ></div>
-              <iframe
-                src={certificate.pdfUrl + "#toolbar=0"}
-                title="Certificate Preview"
-                className="w-full h-full rounded-lg border no-scrollbar overflow-hidden"
-              ></iframe>
+              <div className="relative w-full pb-[141%] md:pb-[70%]">
+                <iframe
+                  src={`${certificate.pdfUrl}#toolbar=0&view=Fit`}
+                  title="Certificate Preview"
+                  className="absolute top-0 left-0 w-full h-full rounded-lg border"
+                ></iframe>
+              </div>
             </div>
             <div className="items-start justify-start text-left group p-2">
               <p className="text-lg font-semibold bg-gradient-to-r from-blue-200 via-white-200 to-purple-200 bg-clip-text text-transparent">
@@ -51,7 +53,7 @@ const CertificateCard = ({ certificate }) => {
             </button>
             <div className="relative w-full pb-[141%] md:pb-[70%]">
               <iframe
-                src={`${certificate.pdfUrl}#toolbar=0&zoom=fitH`}
+                src={`${certificate.pdfUrl}#toolbar=0&view=Fit`}
                 title="Certificate Preview"
                 className="absolute top-0 left-0 w-full h-full rounded-lg border"
               ></iframe>
