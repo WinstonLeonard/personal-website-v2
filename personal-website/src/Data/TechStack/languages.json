@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Java",
+    "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+  },
+  {
+    "name": "JavaScript",
+    "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+  },
+  {
+    "name": "TypeScript",
+    "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+  },
+  {
+    "name": "Python",
+    "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+  },
+  {
+    "name": "C++",
+    "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
+  },
+  {
+    "name": "C",
+    "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg"
+  },
+  {
+    "name": "Go",
+    "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg"
+  }
+]

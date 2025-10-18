@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Docker",
+    "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"
+  },
+  {
+    "name": "Kubernetes",
+    "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg"
+  },
+  {
+    "name": "Jenkins",
+    "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg"
+  },
+  {
+    "name": "Git",
+    "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+  },
+  {
+    "name": "AWS",
+    "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+  },
+  {
+    "name": "Bash",
+    "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg"
+  },
+  {
+    "name": "Jest",
+    "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg"
+  }
+]

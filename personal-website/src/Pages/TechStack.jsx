@@ -12,6 +12,11 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { fetchFrontEnd } from "../api/TechStackApi";
 import AnimatedHeader from "../components/AnimatedHeader";
+import frontend from "../data/TechStack/frontend.json";
+import backend from "../data/TechStack/backend.json";
+import ai_ml from "../data/TechStack/ai_ml.json";
+import languages from "../data/TechStack/languages.json";
+import tools from "../data/TechStack/tools.json";
 
 const SelectionChoice = memo(({ text, icon, onClick, currentSelected }) =>
   currentSelected == text ? (
@@ -189,11 +194,11 @@ const IconContainerMobile = memo(({ selectedIcons }) => (
 
 function TechStack() {
   const [selected, setSelected] = useState("Frontend");
-  const [frontEndData, setFrontEndData] = useState([]);
-  const [backEndData, setBackEndData] = useState([]);
-  const [aiMlData, setAiMlData] = useState([]);
-  const [languagesData, setLanguagesData] = useState([]);
-  const [toolsData, setToolsData] = useState([]);
+  const [frontEndData, setFrontEndData] = useState(frontend);
+  const [backEndData, setBackEndData] = useState(backend);
+  const [aiMlData, setAiMlData] = useState(ai_ml);
+  const [languagesData, setLanguagesData] = useState(languages);
+  const [toolsData, setToolsData] = useState(tools);
 
   const [selectedIcons, setSelectedIcons] = useState(frontEndData);
 
@@ -224,16 +229,14 @@ function TechStack() {
     AOS.init({
       mirror: true,
     });
-
-    return () => AOS.refreshHard();
   }, []);
 
   useEffect(() => {
     const getData = async () => {
       try {
         const result = await fetchFrontEnd();
-        console.log("Fetched Frontend Data:", result);
-        setFrontEndData(result);
+        //console.log("Fetched Frontend Data:", result);
+        //setFrontEndData(result);
       } catch (err) {}
     };
 

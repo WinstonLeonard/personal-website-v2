@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Node.js",
+    "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+  },
+  {
+    "name": "Express.js",
+    "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
+  },
+  {
+    "name": "Django",
+    "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg"
+  },
+  {
+    "name": "Spring",
+    "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg"
+  },
+  {
+    "name": "PostgreSQL",
+    "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
+  },
+  {
+    "name": "MongoDB",
+    "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg"
+  },
+  {
+    "name": "Firebase",
+    "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg"
+  },
+  {
+    "name": "Supabase",
+    "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg"
+  },
+  {
+    "name": "Redis",
+    "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg"
+  },
+  {
+    "name": "RabbitMQ",
+    "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rabbitmq/rabbitmq-original.svg"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "React/Native",
+    "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+  },
+  {
+    "name": "Next.js",
+    "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg"
+  },
+  {
+    "name": "Vite",
+    "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg"
+  },
+  {
+    "name": "Tailwind",
+    "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+  },
+  {
+    "name": "HTML",
+    "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+  },
+  {
+    "name": "CSS",
+    "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+  }
+]
