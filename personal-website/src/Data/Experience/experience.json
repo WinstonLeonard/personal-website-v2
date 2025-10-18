@@ -1,0 +1,103 @@
+[
+  {
+    "role": "Software Engineer Intern",
+    "company": "Continental Automotive",
+    "points": [
+      "Built automotive software solutions for digital clusters using C++",
+      "Developed and automated C++ unit tests with Google Test",
+      "Integrated automated testing into a Jenkins CI/CD pipeline using Docker and Kubernetes."
+    ],
+    "techStack": [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg"
+    ],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA50SrRU-Wf5Y-C_01W6YoP6IxtYYBv_Pw4w&s",
+    "links": [],
+    "duration": "Jan 2025 – Aug 2025"
+  },
+  {
+    "role": "FullStack Developer Intern",
+    "company": "VisionPal",
+    "points": [
+      "Built and maintained an eye-health app with 10,000+ downloads, featuring e-commerce and patient management functions.",
+      "Developed RESTful APIs integrating Stripe Payments and Shopify.",
+      "Designed voucher system to boost user retention.",
+      "Deployed on AWS EC2 with Docker and Kubernetes for scalability."
+    ],
+    "techStack": [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg"
+    ],
+    "image": "https://mnuhdfulimayebkvchyh.supabase.co/storage/v1/object/public/experience_logos/Untitled-1.png",
+    "links": [],
+    "duration": "May 2024 – Aug 2024"
+  },
+  {
+    "role": "Teaching Assistant",
+    "company": "NUS, School of Computing",
+    "points": [
+      "CS2040S (Data Structures and Algorithms - Java). Conduct weekly lab sessions and consultations on algorithmic design and complexity analysis.",
+      "CS1101S (Programming Methodology - Source, subset of JavaScript). Guided freshmen through core computational thinking concepts",
+      "Honour List of Student Tutors (AY2023/2024) for Excellence in Teaching"
+    ],
+    "techStack": [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+    ],
+    "image": "https://mnuhdfulimayebkvchyh.supabase.co/storage/v1/object/public/experience_logos/NUS%20LOGO.png",
+    "links": [],
+    "duration": "Aug 2023 – Present"
+  },
+  {
+    "role": "FullStack Developer",
+    "company": "NUS Indonesian Students’ Union (PINUS)",
+    "points": [
+      "Collaborated closely with 10 members to deploy a study forum for Indonesian students of NUS."
+    ],
+    "techStack": [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg"
+    ],
+    "image": "https://mnuhdfulimayebkvchyh.supabase.co/storage/v1/object/public/experience_logos/pinus.png",
+    "links": ["https://www.pinusstudy.com/"],
+    "duration": "Aug 2023 – May 2024"
+  },
+  {
+    "role": "Backend Developer",
+    "company": "NUSSU (NUS Students’ Union) commIT",
+    "points": [
+      "Built a RFP (Request form for payment) system for NUSSU’S financial department using Django."
+    ],
+    "techStack": [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg"
+    ],
+    "image": "https://mnuhdfulimayebkvchyh.supabase.co/storage/v1/object/public/experience_logos/1631312698698.jpeg",
+    "links": [],
+    "duration": "Aug 2023 – May 2024"
+  },
+  {
+    "role": "Frontend Developer",
+    "company": "Developer Student Club",
+    "points": [
+      "Frontend Developer for the Internal Tech Team at NUS Google Developer Student Club."
+    ],
+    "techStack": [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+    ],
+    "image": "https://mnuhdfulimayebkvchyh.supabase.co/storage/v1/object/public/experience_logos/images.jpeg",
+    "links": [],
+    "duration": "Jan 2024 – May 2024"
+  }
+]

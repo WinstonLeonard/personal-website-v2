@@ -2,39 +2,7 @@ import "aos/dist/aos.css";
 import AOS from "aos";
 import React, { useEffect } from "react";
 import AnimatedHeader from "../components/AnimatedHeader";
-
-const experienceData = [
-  {
-    role: "Software Engineer Intern",
-    company: "Continental Automotive",
-    points: [
-      "Accomplished [X] as measured by [Y], by doing [Z].",
-      "Accomplished [X] as measured by [Y], by doing [Z].",
-    ],
-    techStack: [
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-    ],
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA50SrRU-Wf5Y-C_01W6YoP6IxtYYBv_Pw4w&s",
-    duration: "Jan 2024 – Jun 2024",
-  },
-  {
-    role: "Software Engineer Intern",
-    company: "Continental Automotive",
-    points: [
-      "Accomplished [X] as measured by [Y], by doing [Z].",
-      "Accomplished [X] as measured by [Y], by doing [Z].",
-    ],
-    techStack: [
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-    ],
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA50SrRU-Wf5Y-C_01W6YoP6IxtYYBv_Pw4w&s",
-    duration: "Jul 2024 – Dec 2024",
-  },
-];
+import experienceData from "../Data/Experience/experience.json";
 
 /* ========== Small, data-only components ========== */
 
@@ -57,7 +25,7 @@ const CircleAndLine = React.memo(({ image }) => (
   </div>
 ));
 
-const ExperiencePoint = React.memo(({ points }) => (
+const ExperiencePoint = React.memo(({ points, links }) => (
   <div>
     {points.map((point, index) => (
       <div className="flex flex-row justify-start items-start">
@@ -67,6 +35,26 @@ const ExperiencePoint = React.memo(({ points }) => (
         <div className="w-[96%] flex justify-start items-start flex-col">
           <p className="w-full self-start text-justify font-md group-hover:font-semibold transition-all duration-300 mb-2">
             {point}
+          </p>
+        </div>
+      </div>
+    ))}
+    {links.map((link, idx) => (
+      <div className="flex flex-row justify-start items-start">
+        <div className="w-[3%] flex">
+          <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 group-hover:scale-125 transition-transform duration-300 mt-2.5" />
+        </div>
+        <div className="w-[96%] flex justify-start items-start flex-col">
+          <p className="w-full self-start text-justify font-md group-hover:font-semibold transition-all duration-300 mb-2">
+            View it{" "}
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:underline"
+            >
+              here
+            </a>
           </p>
         </div>
       </div>
@@ -125,7 +113,7 @@ const ExperienceDetails = React.memo(({ direction, data }) => (
         </div>
 
         <div className="flex flex-col flex-grow mt-3 group">
-          <ExperiencePoint points={data.points} />
+          <ExperiencePoint points={data.points} links={data.links} />
 
           <div className="flex flex-grow justify-between">
             <TechStack techStack={data.techStack} />
@@ -205,7 +193,7 @@ const TechStackMobile = React.memo(({ techStack }) => (
   </div>
 ));
 
-const ExperiencePointsMobile = React.memo(({ points }) => (
+const ExperiencePointsMobile = React.memo(({ points, links }) => (
   <div className="flex flex-col gap-2">
     {points.map((p, i) => (
       <div key={i} className="flex flex-row justify-start items-start">
@@ -214,6 +202,26 @@ const ExperiencePointsMobile = React.memo(({ points }) => (
         </div>
         <div className="w-[96%] flex justify-start items-start ">
           <p className="w-full self-start text-left font-md ">{p}</p>
+        </div>
+      </div>
+    ))}
+    {links.map((link, idx) => (
+      <div className="flex flex-row justify-start items-start">
+        <div className="w-[3%] flex mr-1">
+          <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 mt-2.5" />
+        </div>
+        <div className="w-[96%] flex justify-start items-start">
+          <p className="w-full self-start text-left font-md">
+            View it{" "}
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:underline"
+            >
+              here
+            </a>
+          </p>
         </div>
       </div>
     ))}
@@ -245,7 +253,7 @@ const ExperienceDetailsMobile = React.memo(({ direction, data }) => (
         </div>
 
         <div className="flex flex-col flex-grow mt-3 group">
-          <ExperiencePointsMobile points={data.points} />
+          <ExperiencePointsMobile points={data.points} links={data.links} />
           <div className="flex flex-grow justify-between">
             <TechStackMobile techStack={data.techStack} />
           </div>
