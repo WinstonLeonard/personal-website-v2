@@ -19,6 +19,11 @@ const techToIcon = {
 };
 
 export default function ProjectDetails() {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [fullscreenImg, setFullscreenImg] = useState(null);
+
+  const sliderRef = React.useRef(null);
+
   const { id } = useParams();
   const project = projects.find((p) => p.id === Number(id)) || projects[0];
   const demoVideoUrl = project.videoDemo || "";
@@ -34,10 +39,9 @@ export default function ProjectDetails() {
     slidesToScroll: 1,
     adaptiveHeight: false,
     arrows: true,
-    autoplay: true,
+    autoplay: !isPlaying, // disable autoplay while video is playing
     autoplaySpeed: 2000,
-    pauseOnHover: true,
-    // Make sure slick calculates width based on container
+    pauseOnHover: false,
     variableWidth: false,
     centerMode: false,
   };
@@ -149,10 +153,28 @@ export default function ProjectDetails() {
           <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-white/10 group-hover:ring-white/20 transition" />
 
           {/* Fixed-height container so slick can fill it */}
-          <div className="h-[24rem] md:h-[30rem]">
-            <Slider {...sliderSettings} className="h-full w-full">
+          <div className="h-[24rem] md:h-[30rem] relative">
+            {/* ✅ Move this outside of the fixed-height container */}
+            {fullscreenImg && (
+              <div
+                className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center"
+                onClick={() => setFullscreenImg(null)}
+              >
+                <img
+                  src={fullscreenImg}
+                  alt="Fullscreen preview"
+                  className="max-h-[90vh] max-w-[90vw] object-contain"
+                />
+              </div>
+            )}
+
+            <Slider
+              ref={sliderRef}
+              {...sliderSettings}
+              className="h-full w-full"
+            >
               {[
-                { type: "video", src: demoVideoUrl },
+                ...(demoVideoUrl ? [{ type: "video", src: demoVideoUrl }] : []),
                 ...project.images.map((src) => ({ type: "image", src })),
               ].map((item, index) => (
                 <div key={index} className="h-full w-full">
@@ -160,8 +182,9 @@ export default function ProjectDetails() {
                     <img
                       src={item.src}
                       alt={`project-image-${index + 1}`}
-                      className="h-full w-full object-cover select-none"
+                      className="h-full w-full object-cover select-none cursor-zoom-in"
                       draggable={false}
+                      onClick={() => setFullscreenImg(item.src)} // ✅ open modal
                     />
                   ) : (
                     <video
@@ -170,6 +193,9 @@ export default function ProjectDetails() {
                       loop
                       controls
                       className="h-full w-full object-cover"
+                      onPlay={() => setIsPlaying(true)}
+                      onPause={() => setIsPlaying(false)}
+                      onEnded={() => setIsPlaying(false)}
                     >
                       <source src={item.src} type="video/mp4" />
                       Your browser does not support the video tag.

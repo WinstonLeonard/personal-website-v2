@@ -8,19 +8,19 @@
   {
     "id": 2,
     "name": "Pii-Kaa-Boo",
-    "description": "This is the description of the project. This is the description of the project. This is the description of the project.",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmSmJgXu6kW8ONXMTLq0LD6BJGFV3Hoc0DRg&s"
+    "description": "A powerful privacy-first solution that automatically detects and removes Personally Identifiable Information (PII) from text, images, and audio before sending content to AI services.",
+    "image": "https://mnuhdfulimayebkvchyh.supabase.co/storage/v1/object/public/project_preview/piikaboo%20logo.png"
   },
   {
     "id": 3,
     "name": "GatherGo",
-    "description": "This is the description of the project. This is the description of the project. This is the description of the project.",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmSmJgXu6kW8ONXMTLq0LD6BJGFV3Hoc0DRg&s"
+    "description": "Your all-in-one mobile app for planning events, inviting friends, and staying connected through real-time chats, location sharing, and split-bill tracking.",
+    "image": "https://mnuhdfulimayebkvchyh.supabase.co/storage/v1/object/public/project_preview/GatherGo%20Logo.png"
   },
   {
     "id": 4,
-    "name": "Project Name",
-    "description": "This is the description of the project. This is the description of the project. This is the description of the project.",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmSmJgXu6kW8ONXMTLq0LD6BJGFV3Hoc0DRg&s"
+    "name": "PINUS Study",
+    "description": "An online platform built for Indonesian NUS Students where they can interact and open a discussion thread for modules.",
+    "image": "https://mnuhdfulimayebkvchyh.supabase.co/storage/v1/object/public/project_preview/Pinus%20Study%20Logo.png"
   }
 ]

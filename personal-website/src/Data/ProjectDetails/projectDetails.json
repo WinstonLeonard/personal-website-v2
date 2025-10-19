@@ -20,6 +20,7 @@
       "Deployed the system on Google Cloud Platform (Compute Engine) with Kubernetes for orchestration and scalability."
     ],
     "github": "https://github.com/WinstonLeonard/cs3219-ay2425s1-project-g52",
+    "link": "",
     "technologies": [
       {
         "name": "React",
@@ -52,6 +53,126 @@
       {
         "name": "NGINX",
         "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nginx/nginx-original.svg"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Pii-Kaa-Boo",
+    "description": "A powerful privacy-first solution that automatically detects and removes Personally Identifiable Information (PII) from text, images, and audio before sending content to AI services. Users can apply flexible, category-based filters (names, emails, phone numbers, addresses, URLs, etc.) to decide exactly what to redact. After scrubbing, the sanitized content can safely be sent to cloud AI services, while the original remains protected on-device. Response from the cloud AI services will then be displayed with the original content.",
+    "images": [],
+    "videoDemo": "https://mnuhdfulimayebkvchyh.supabase.co/storage/v1/object/public/project_details/PII-KA-BOO%20demo.mp4",
+    "features": [
+      "Text PII Redaction - Advanced pattern matching and ML-based detection using a DistilBERT model.",
+      "Image Anonymization - Face blurring, license plate detection, and text redaction using Grad-CAM or Eigen-CAM to highlight the parts of the image that influence the location prediction.",
+      "Audio Scrubbing - Remove spoken names and other PII from voice recordings using Whispher ASR and NLP techniques.",
+      "Category-based Filters - Full user control over what gets redacted.",
+      "Context Preservation - Smart placeholders for seamless AI processing",
+      "On-Device Processing - Your data never leaves your device unprocessed.",
+      "Full Stack Implementation - Next.js (TypeScript)"
+    ],
+    "github": "https://github.com/WinstonLeonard/pii-ka-boo",
+    "link": "",
+    "technologies": [
+      {
+        "name": "Next.js",
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg"
+      },
+      {
+        "name": "TypeScript",
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+      },
+      {
+        "name": "Python",
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+      },
+      {
+        "name": "TensorFlow",
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg"
+      },
+      {
+        "name": "PyTorch",
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "GatherGo",
+    "description": "Your all-in-one mobile app for planning events, inviting friends, and staying connected through real-time chats, location sharing, and split-bill tracking.",
+    "images": [],
+    "videoDemo": "https://mnuhdfulimayebkvchyh.supabase.co/storage/v1/object/public/project_details/GatherGo%20Demo.mp4",
+    "features": [
+      "Cross-Platform Mobile App - Built with React Native for both iOS and Android devices.",
+      "Implemented friend system, event invitations, and real-time group chats with Firebase.",
+      "Integrated Google Maps API for location sharing and split-bill tracking for group expenses.",
+      "Designed Firestore data models for authentication, event management, and chat persistence.",
+      "Enhanced usability through persistent login, profile editing, and reminder features for upcoming events."
+    ],
+    "github": "https://github.com/WinstonLeonard/Orbital_GatherGo",
+    "link": "",
+    "technologies": [
+      {
+        "name": "React Native",
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+      },
+      {
+        "name": "JavaScript",
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+      },
+      {
+        "name": "Firebase",
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-plain.svg"
+      },
+      {
+        "name": "Android Studio",
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg"
+      },
+      {
+        "name": "XCode",
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/xcode/xcode-original.svg"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Pinus Study",
+    "description": "An online platform built for Indonesian NUS Students where they can interact and open a discussion thread for modules.",
+    "images": [
+      "https://mnuhdfulimayebkvchyh.supabase.co/storage/v1/object/public/project_details/pinusstudy1.png",
+      "https://mnuhdfulimayebkvchyh.supabase.co/storage/v1/object/public/project_details/pinusstudy2.png",
+      "https://mnuhdfulimayebkvchyh.supabase.co/storage/v1/object/public/project_details/pinusstudy3.png",
+      "https://mnuhdfulimayebkvchyh.supabase.co/storage/v1/object/public/project_details/pinusstudy4.png"
+    ],
+    "videoDemo": "",
+    "features": [
+      "A fullstack web application built with React (TypeScript) frontend and Golang backend with PostgreSQL database.",
+      "Provides a forum platform for NUS students—especially Indonesian students—to discuss and share insights about university modules.",
+      "Allows users to create and join discussion threads on specific courses, assignments, and study tips.",
+      "Enables students to review and suggest improvements for modules to help future cohorts."
+    ],
+    "github": "https://github.com/pinus-tech",
+    "link": "",
+    "technologies": [
+      {
+        "name": "React",
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+      },
+      {
+        "name": "TypeScript",
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+      },
+      {
+        "name": "Go",
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg"
+      },
+      {
+        "name": "PostgreSQL",
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
+      },
+      {
+        "name": "Supabase",
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg"
       }
     ]
   }
