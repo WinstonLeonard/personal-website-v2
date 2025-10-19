@@ -1,5 +1,4 @@
 import DummyComponent from "../components/DummyComponent";
-import Certificate from "../components/Certificate";
 import AnimatedBackground from "../components/Background";
 import AboutMe from "./AboutMe";
 import TechStack from "./TechStack";

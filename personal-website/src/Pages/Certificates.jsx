@@ -1,6 +1,7 @@
 import AnimatedHeader from "../components/AnimatedHeader";
 import React, { useState } from "react";
 import { pdfjs, Document, Page } from "react-pdf";
+import certificates from "../Data/Certificates/certificates.json";
 
 // Configure pdf.js worker
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
@@ -96,12 +97,9 @@ const Certificates = () => {
     <>
       <AnimatedHeader Title={"Certificates"} />
       <div className="grid grid-cols-[repeat(auto-fit,_minmax(340px,_1fr))] md:grid-cols-[repeat(auto-fit,_minmax(400x,_1fr))] max-w-[90%] mx-auto gap-x-5 gap-y-5 mt-10">
-        <CertificateCard
-          certificate={{
-            name: "Honor List Honour List of Student Tutors (AY2023/2024)",
-            pdfUrl: "/certificate.pdf",
-          }}
-        />
+        {certificates.map((certificate, index) => (
+          <CertificateCard key={index} certificate={certificate} />
+        ))}
       </div>
     </>
   );
