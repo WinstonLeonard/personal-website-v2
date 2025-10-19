@@ -1,22 +1,22 @@
 [
   {
     "name": "Honor List Honour List of Student Tutors (AY 2023/2024) - NUS",
-    "pdfUrl": "./src/Data/Certificates/Honor List Student Tutor.pdf"
+    "pdfUrl": "./Certificates/Honor List Student Tutor.pdf"
   },
   {
     "name": "Distinction in AI/ML Focus Area - NUS",
-    "pdfUrl": "./src/Data/Certificates/AI Focus Area.pdf"
+    "pdfUrl": "./Certificates/AI Focus Area.pdf"
   },
   {
     "name": "Top Student in CS4225 (Big Data Systems for Data Science) - NUS",
-    "pdfUrl": "./src/Data/Certificates/Top Student CS4225.pdf"
+    "pdfUrl": "./Certificates/Top Student CS4225.pdf"
   },
   {
     "name": "Continental Internship Certificate - Continental AG",
-    "pdfUrl": "./src/Data/Certificates/Continental Internship Certificate.pdf"
+    "pdfUrl": "./Certificates/Continental Internship Certificate.pdf"
   },
   {
     "name": "Generative AI Hackathon Winner - SMU",
-    "pdfUrl": "./src/Data/Certificates/SMU Lit Generative AI Hackathon Winner.pdf"
+    "pdfUrl": "./Certificates/SMU Lit Generative AI Hackathon Winner.pdf"
   }
 ]
