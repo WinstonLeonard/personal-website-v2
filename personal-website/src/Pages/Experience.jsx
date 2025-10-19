@@ -308,7 +308,7 @@ const Experience = () => {
   }, []);
 
   return (
-    <div id="Experience">
+    <div id="experience">
       <AnimatedHeader Title={"Experience"} />
 
       {/* Desktop */}

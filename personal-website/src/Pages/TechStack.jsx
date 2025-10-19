@@ -264,7 +264,7 @@ function TechStack() {
   }, [frontEndData, backEndData, aiMlData, languagesData, toolsData]);
 
   return (
-    <div id="TechStack">
+    <div id="techstack">
       <div className="hidden md:flex flex-col">
         <AnimatedHeader Title={"Tech Stack"} />
         <AnimatedSelectionBar

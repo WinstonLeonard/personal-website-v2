@@ -5,11 +5,14 @@ import TechStack from "./TechStack";
 import Experience from "./Experience";
 import Projects from "./Projects";
 import Certificates from "./Certificates";
+import Navbar from "../components/NavBar";
 
 const LandingPage = () => {
   return (
     <>
       <AnimatedBackground />
+      <Navbar />
+
       <AboutMe />
       <TechStack />
       <Experience />

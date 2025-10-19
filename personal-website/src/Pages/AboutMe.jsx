@@ -174,7 +174,7 @@ const AboutMe = () => {
     };
   }, []);
   return (
-    <div className="" id="About">
+    <div className="" id="about">
       <div className="flex lg:hidden">
         {/* This div will only appear on small screens (below 640px). */}
         <div className="flex flex-col">

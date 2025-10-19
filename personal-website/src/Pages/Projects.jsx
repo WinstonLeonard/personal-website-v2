@@ -139,14 +139,14 @@ const Projects = () => {
     };
   }, []);
   return (
-    <>
+    <div id="projects">
       <AnimatedHeader Title={"Projects"} />
       <div className="grid grid-cols-[repeat(auto-fit,_minmax(340px,_1fr))] max-w-[90%] mx-auto gap-x-5 gap-y-5 mt-10">
         {projectPreviewData.map((project, index) => (
           <ProjectCard key={index} project={project} />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

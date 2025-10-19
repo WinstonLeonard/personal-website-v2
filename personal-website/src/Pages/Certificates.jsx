@@ -94,14 +94,14 @@ const CertificateCard = ({ certificate }) => {
 
 const Certificates = () => {
   return (
-    <>
+    <div id="certificates">
       <AnimatedHeader Title={"Certificates"} />
       <div className="grid grid-cols-[repeat(auto-fit,_minmax(340px,_1fr))] md:grid-cols-[repeat(auto-fit,_minmax(400x,_1fr))] max-w-[90%] mx-auto gap-x-5 gap-y-5 mt-10">
         {certificates.map((certificate, index) => (
           <CertificateCard key={index} certificate={certificate} />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 
