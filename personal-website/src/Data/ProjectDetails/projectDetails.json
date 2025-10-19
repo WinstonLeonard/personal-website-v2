@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Peer Prep",
+    "description": "A full-stack real-time pair programming platform built with React (TypeScript), Node.js, and MongoDB, featuring a queue-based matchmaking system, Socket.IO and WebRTC for live code collaboration and video chat, and an integrated Gemini AI API for contextual coding assistance.",
+    "images": [
+      "https://mnuhdfulimayebkvchyh.supabase.co/storage/v1/object/public/project_details/peerprep1.png",
+      "https://mnuhdfulimayebkvchyh.supabase.co/storage/v1/object/public/project_details/peerprep2.png",
+      "https://mnuhdfulimayebkvchyh.supabase.co/storage/v1/object/public/project_details/peerprep3.png",
+      "https://mnuhdfulimayebkvchyh.supabase.co/storage/v1/object/public/project_details/peerprep4.png",
+      "https://mnuhdfulimayebkvchyh.supabase.co/storage/v1/object/public/project_details/peerprep5.png"
+    ],
+    "videoDemo": "https://mnuhdfulimayebkvchyh.supabase.co/storage/v1/object/public/project_details/peerprep%20video%20(1).mp4",
+    "features": [
+      "Connects users for pair programming with integrated AI assistance, secure communication, and persistent session history.",
+      "Microservices architecture with React (TypeScript) frontend and Node.js, Express.js, MongoDB backend.",
+      "Real-time collaboration using Socket.IO and WebRTC for live code editing, chat, and video calls.",
+      "Generative AI Coding Assistant using Google Gemini AI API.",
+      "Designed and deployed containerized microservices using Docker, RabbitMQ for message queuing",
+      "Deployed the system on Google Cloud Platform (Compute Engine) with Kubernetes for orchestration and scalability."
+    ],
+    "github": "https://github.com/WinstonLeonard/cs3219-ay2425s1-project-g52",
+    "technologies": [
+      {
+        "name": "React",
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+      },
+      {
+        "name": "Node.js",
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+      },
+      {
+        "name": "Express.js",
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
+      },
+      {
+        "name": "MongoDB",
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"
+      },
+      {
+        "name": "RabbitMQ",
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rabbitmq/rabbitmq-original.svg"
+      },
+      {
+        "name": "Socket.IO",
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/socketio/socketio-original.svg"
+      },
+      {
+        "name": "Docker",
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"
+      },
+      {
+        "name": "NGINX",
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nginx/nginx-original.svg"
+      }
+    ]
+  }
+]

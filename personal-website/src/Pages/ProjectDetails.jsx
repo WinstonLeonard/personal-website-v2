@@ -5,58 +5,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { CheckCircle2, Code2, Wind, Zap, Palette, Github } from "lucide-react";
+import projects from "../Data/ProjectDetails/projectDetails.json";
 
 // --- Demo data ---------------------------------------------------------------
-const projects = {
-  1: {
-    name: "Portfolio Website",
-    description:
-      "A modern, animated personal portfolio built with React, Tailwind, and Vite. It showcases projects, experience, and an interactive background. A modern, animated personal portfolio built with React, Tailwind, and Vite. It showcases projects, experience, and an interactive background.",
-    images: [
-      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop",
-    ],
-    features: [
-      "Responsive grid and slider galleries",
-      "Project pages with rich details",
-      "Smooth scroll-based interactions",
-      "Animated header with gradient text",
-      "Dark mode toggle with system preference",
-      "Contact form with validation",
-    ],
-    technologies: [
-      {
-        name: "React",
-        url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-      },
-      {
-        name: "React",
-        url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-      },
-      {
-        name: "React",
-        url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-      },
-      {
-        name: "React",
-        url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-      },
-      {
-        name: "React",
-        url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-      },
-      {
-        name: "React",
-        url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-      },
-      {
-        name: "React",
-        url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-      },
-    ],
-  },
-};
 
 const techToIcon = {
   React: Code2,
@@ -69,9 +20,8 @@ const techToIcon = {
 
 export default function ProjectDetails() {
   const { id } = useParams();
-  const project = projects[id] || Object.values(projects)[0];
-  const demoVideoUrl =
-    "https://mnuhdfulimayebkvchyh.supabase.co/storage/v1/object/public/techstack-icons//Screen%20Recording%202025-06-19%20164911.mp4";
+  const project = projects.find((p) => p.id === Number(id)) || projects[0];
+  const demoVideoUrl = project.videoDemo || "";
 
   // De-duplicate any repeated features
   const features = Array.from(new Set(project.features));
@@ -85,7 +35,7 @@ export default function ProjectDetails() {
     adaptiveHeight: false,
     arrows: true,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 2000,
     pauseOnHover: true,
     // Make sure slick calculates width based on container
     variableWidth: false,
@@ -170,22 +120,24 @@ export default function ProjectDetails() {
                 ))}
               </ul>
               {/* Github Link */}
-              <div className="flex flex-wrap items-center gap-3">
-                <button className="cursor-pointer group relative p-2 transform transition-all duration-300 hover:scale-105 hover:shadow-lg mt-3">
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#6366f1] to-[#a855f7] rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
-                  <div className="relative rounded-xl bg-black/50 backdrop-blur-xl p-2 flex flex-row items-center justify-center border border-white/10 group-hover:border-white/20 transition-all duration-300 px-4 py-3">
-                    <a
-                      href="https://github.com/"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center gap-2"
-                    >
-                      <Github size={18} />
-                      <span>GitHub</span>
-                    </a>
-                  </div>
-                </button>
-              </div>
+              {project.github && (
+                <div className="flex flex-wrap items-center gap-3">
+                  <button className="cursor-pointer group relative p-2 transform transition-all duration-300 hover:scale-105 hover:shadow-lg mt-3">
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#6366f1] to-[#a855f7] rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
+                    <div className="relative rounded-xl bg-black/50 backdrop-blur-xl p-2 flex flex-row items-center justify-center border border-white/10 group-hover:border-white/20 transition-all duration-300 px-4 py-3">
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-2"
+                      >
+                        <Github size={18} />
+                        <span>GitHub</span>
+                      </a>
+                    </div>
+                  </button>
+                </div>
+              )}
             </div>
           </div>
           {/* BREAK */}
@@ -200,8 +152,8 @@ export default function ProjectDetails() {
           <div className="h-[24rem] md:h-[30rem]">
             <Slider {...sliderSettings} className="h-full w-full">
               {[
-                ...project.images.map((src) => ({ type: "image", src })),
                 { type: "video", src: demoVideoUrl },
+                ...project.images.map((src) => ({ type: "image", src })),
               ].map((item, index) => (
                 <div key={index} className="h-full w-full">
                   {item.type === "image" ? (

@@ -98,9 +98,7 @@ const Certificates = () => {
       <div className="grid grid-cols-[repeat(auto-fit,_minmax(340px,_1fr))] md:grid-cols-[repeat(auto-fit,_minmax(400x,_1fr))] max-w-[90%] mx-auto gap-x-5 gap-y-5 mt-10">
         <CertificateCard
           certificate={{
-            name: "Certificate Title",
-            description:
-              "This is a preview of your certificate. Click to view.",
+            name: "Honor List Honour List of Student Tutors (AY2023/2024)",
             pdfUrl: "/certificate.pdf",
           }}
         />
